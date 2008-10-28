@@ -1,6 +1,6 @@
 == Prerequisites
 
-Install Pygments:
+Install Pygments (http://pygments.org/):
 
     sudo port install py-pygments
 

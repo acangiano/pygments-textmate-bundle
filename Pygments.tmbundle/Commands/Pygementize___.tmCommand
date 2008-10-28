@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+import os
+import sys
+from commands import getoutput
+from pygments import highlight
+from pygments.lexers import get_all_lexers, get_lexer_by_name
+from pygments.formatters import HtmlFormatter
+
+try:
+    code = os.environ['TM_SELECTED_TEXT']
+except KeyError:
+    sys.exit()
+
+available_languages = ", ".join(sorted('"'+lex[1][0]+'"' for lex in get_all_lexers()))
+chosen_language = getoutput("""echo $(osascript &lt;&lt;'AS'
+    tell app "TextMate"
+        activate
+        choose from list { %(languages)s } \
+            with title "Pick a language" \
+            with prompt "Select a language"
+    end tell
+AS)""" % {'languages':available_languages})
+os.system("osascript -e 'tell app ""TextMate"" to activate' &amp;&gt;/dev/null &amp;")
+
+lexer = get_lexer_by_name(chosen_language.lower())
+formatter = HtmlFormatter() # linenos=False
+print highlight(code, lexer, formatter)</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^~3</string>
+	<key>name</key>
+	<string>Pygementize...</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>C7DB79EC-C4E6-48F9-8E47-3A9767BF333D</string>
+</dict>
+</plist>

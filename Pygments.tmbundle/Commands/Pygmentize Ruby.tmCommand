@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+import os
+import sys
+from pygments import highlight
+from pygments.lexers import RubyLexer
+from pygments.formatters import HtmlFormatter
+
+try:
+    code = os.environ['TM_SELECTED_TEXT']
+except KeyError:
+    sys.exit()
+
+formatter = HtmlFormatter()
+print highlight(code, RubyLexer(), formatter)</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^~1</string>
+	<key>name</key>
+	<string>Pygmentize Ruby Code</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>6C4CF771-C9B7-45E7-B694-1F2109000708</string>
+</dict>
+</plist>

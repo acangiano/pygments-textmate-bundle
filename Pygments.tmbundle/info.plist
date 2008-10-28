@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>contactEmailRot13</key>
+	<string>npnatvnab@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Antonio Cangiano</string>
+	<key>description</key>
+	<string>Support for Pygments, a general syntax highlighter.</string>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>6C4CF771-C9B7-45E7-B694-1F2109000708</string>
+			<string>28E23A22-E728-48DF-9AF4-B920510485D2</string>
+			<string>C7DB79EC-C4E6-48F9-8E47-3A9767BF333D</string>
+			<string>2F59A6F9-00FC-4D64-9255-88EEDDA479D8</string>
+			<string>------------------------------------</string>
+			<string>68BC8F3C-EB8F-4527-9985-4BA13ED7F23C</string>
+		</array>
+		<key>submenus</key>
+		<dict/>
+	</dict>
+	<key>name</key>
+	<string>Pygments</string>
+	<key>ordering</key>
+	<array>
+		<string>6C4CF771-C9B7-45E7-B694-1F2109000708</string>
+		<string>28E23A22-E728-48DF-9AF4-B920510485D2</string>
+		<string>C7DB79EC-C4E6-48F9-8E47-3A9767BF333D</string>
+		<string>2F59A6F9-00FC-4D64-9255-88EEDDA479D8</string>
+	</array>
+	<key>uuid</key>
+	<string>A6BFA3E2-C919-4BB5-9248-6E94DBC1EBBE</string>
+</dict>
+</plist>

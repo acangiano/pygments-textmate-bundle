@@ -9,7 +9,6 @@ Install Pygments (http://pygments.org/):
     
     sudo mkdir -p /Library/Application\ Support/TextMate/Bundles
     cd /Library/Application\ Support/TextMate/Bundles
-    cd /tmp
     git clone git://github.com/acangiano/pygments-textmate-bundle.git "Pygments.bundle"
 
 If TextMate is running while you perform the update, you may want to also execute the following line:
